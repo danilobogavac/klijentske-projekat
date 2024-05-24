@@ -1,39 +1,164 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import { Container, Row, Col } from "reactstrap";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "../../styles/header.css";
 
-const Header = () => {
-    return ( 
-        <header className="header">
-            <div className="header__top">
-                <Container>
-                    <Row>
-                        <Col lg='6' md='6' sm='6'>
-                            <div className="header__top__left">
-                                <span>Treba Vam pomoć?</span>
-                                <span className="header__top__help">
-                                <i class="ri-phone-fill"></i> +381 64-555-666
-                                </span>    
-                            </div> 
-                        </Col>
+const navLinks = [
+  {
+    path: "/početna",
+    display: "Početna",
+  },
+  {
+    path: "/onama",
+    display: "O nama",
+  },
+  {
+    path: "/automobili",
+    display: "Automobili",
+  },
 
-                        <Col lg='6' md='6' sm='6'>
-                            <div className="header__top__right d-flex align-items-center justify-content-end gap-3">
-                            <Link to="#" className="d-flex align-items-center gap-1">
-                                <i class="ri-login-circle-line"></i> Prijava
-                            </Link>
-                            <Link to="#" className="d-flex align-items-center gap-1">
-                                 <i class="ri-user-fill"></i> Registracija
-                            </Link>
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
+  {
+    path: "/blogovi",
+    display: "Blog",
+  },
+  {
+    path: "/kontakt",
+    display: "Kontakt",
+  },
+];
+
+const Header = () => {
+  const menuRef = useRef(null);
+
+  const toggleMenu = () => menuRef.current.classList.toggle("menu__active");
+
+  return (
+    <header className="header">
+
+      {/* ============ header gornji deo ============ */}
+      <div className="header__top">
+        <Container>
+          <Row>
+            <Col lg="6" md="6" sm="6">
+              <div className="header__top__left">
+                <span>Treba Vam pomoć?</span>
+                <span className="header__top__help">
+                  <i class="ri-phone-fill"></i> +381 65 555 666
+                </span>
+              </div>
+            </Col>
+
+            <Col lg="6" md="6" sm="6">
+              <div className="header__top__right d-flex align-items-center justify-content-end gap-3">
+                <Link to="#" className=" d-flex align-items-center gap-1">
+                  <i class="ri-login-circle-line"></i> Prijava
+                </Link>
+
+                <Link to="#" className=" d-flex align-items-center gap-1">
+                  <i class="ri-user-line"></i> Registracija
+                </Link>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+
+      {/* =============== header srednji deo =========== */}
+      <div className="header__middle">
+        <Container>
+          <Row>
+            <Col lg="4" md="3" sm="4">
+              <div className="logo">
+                <h1>
+                  <Link to="/home" className=" d-flex align-items-center gap-2">
+                  <i class="ri-xrp-line"></i>
+                    <span>
+                      Rent a Car <br /> Servis
+                    </span>
+                  </Link>
+                </h1>
+              </div>
+            </Col>
+
+            <Col lg="3" md="3" sm="4">
+              <div className="header__location d-flex align-items-center gap-2">
+                <span>
+                  <i class="ri-earth-line"></i>
+                </span>
+                <div className="header__location-content">
+                  <h4>Vračar</h4>
+                  <h6>Beograd, Srbija</h6>
+                </div>
+              </div>
+            </Col>
+
+            <Col lg="3" md="3" sm="4">
+              <div className="header__location d-flex align-items-center gap-2">
+                <span>
+                  <i class="ri-time-line"></i>
+                </span>
+                <div className="header__location-content">
+                  <h4>Ponedeljak - Subota</h4>
+                  <h6>9:00 - 17:00</h6>
+                </div>
+              </div>
+            </Col>
+
+            <Col
+              lg="2"
+              md="3"
+              sm="0"
+              className=" d-flex align-items-center justify-content-end "
+            >
+              <button className="header__btn btn ">
+                <Link to="/contact">
+                  <i class="ri-phone-line"></i> Pozovite nas!
+                </Link>
+              </button>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+
+      {/* ========== glavni nav meni =========== */}
+
+      <div className="main__navbar">
+        <Container>
+          <div className="navigation__wrapper d-flex align-items-center justify-content-between">
+            <span className="mobile__menu">
+              <i class="ri-menu-line" onClick={toggleMenu}></i>
+            </span>
+
+            <div className="navigation" ref={menuRef} onClick={toggleMenu}>
+              <div className="menu">
+                {navLinks.map((item, index) => (
+                  <NavLink
+                    to={item.path}
+                    className={(navClass) =>
+                      navClass.isActive ? "nav__active nav__item" : "nav__item"
+                    }
+                    key={index}
+                  >
+                    {item.display}
+                  </NavLink>
+                ))}
+              </div>
             </div>
-        </header>
-     );
-}
- 
+
+            <div className="nav__right">
+              <div className="search__box">
+                <input type="text" placeholder="Pretraži" />
+                <span>
+                  <i class="ri-search-line"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </div>
+    </header>
+  );
+};
+
 export default Header;

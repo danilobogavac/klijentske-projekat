@@ -1,23 +1,25 @@
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import Home from "../pages/Home";
-import About from "../pages/About";
-import CarListing from "../pages/CarListing";
+import Početna from "../pages/Početna";
+import ONama from "../pages/ONama";
+import Automobili from "../pages/Automobili";
 import CarDetails from "../pages/CarDetails";
 import Blog from "../pages/Blog";
 import BlogDetails from "../pages/BlogDetails";
 import NotFound from "../pages/NotFound";
+import Kontakt from "../pages/Kontakt";
 
 const Routers = () => {
     return (
         <Routes>
-          <Route path="/" element={<Navigate to="/home" />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/cars" element={<CarListing />} />
-          <Route path="/cars/:slug" element={<CarDetails />} />
-          <Route path="/blogs" element={<Blog />} />
-          <Route path="/blogs/:slug" element={<BlogDetails />} />
+          <Route path="/" element={<Navigate to="/početna" />} />
+          <Route path="/početna" element={<Početna />} />
+          <Route path="/onama" element={<ONama />} />
+          <Route path="/automobili" element={<Automobili />} />
+          <Route path="/automobili/:slug" element={<CarDetails />} />
+          <Route path="/blogovi" element={<Blog />} />
+          <Route path="/blogovi/:slug" element={<BlogDetails />} />
+          <Route path="/kontakt" element={<Kontakt />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       );
