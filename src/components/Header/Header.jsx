@@ -56,7 +56,7 @@ const Header = () => {
                 </Link>
 
                 <Link to="#" className=" d-flex align-items-center gap-1">
-                  <i class="ri-user-line"></i> Registracija
+                  <i class="ri-user-line"></i> Prijava
                 </Link>
               </div>
             </Col>
