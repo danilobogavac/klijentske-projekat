@@ -6,6 +6,10 @@ import Helmet from "../components/Helmet/Helmet";
 import { Container, Row, Col } from "reactstrap";
 import FindCarForm from "../components/UI/FindCarForm";
 import AboutSection from "../components/UI/AboutSection";
+import ServicesList from "../components/UI/ServicesList";
+import carData from "../assets/data/carData";
+import CarItem from "../components/UI/CarItem";
+import Testimonial from "../components/UI/Testimonial";
 
 const Home = () => {
     return ( 
@@ -31,6 +35,49 @@ const Home = () => {
       </section>
       {/* =========== O nama ================ */}
       <AboutSection />
+      {/* ========== Naše usloge ============ */}
+      <section>
+        <Container>
+          <Row>
+            <Col lg="12" className="mb-5 text-center">
+              <h6 className="section__subtitle">VIDITE NAŠE</h6>
+              <h2 className="section__title">NAJPOPULARNIJE USLUGE!</h2>
+            </Col>
+
+            <ServicesList />
+          </Row>
+        </Container>
+      </section>
+       {/* =========== Ponuda automobila ============= */}
+       <section>
+        <Container>
+          <Row>
+            <Col lg="12" className="text-center mb-5">
+              <h6 className="section__subtitle">UGRABITE NAŠE</h6>
+              <h2 className="section__title">NAJBOLJE PONUDE</h2>
+            </Col>
+
+            {carData.slice(0, 6).map((item) => (
+              <CarItem item={item} key={item.id} />
+            ))}
+          </Row>
+        </Container>
+      </section>
+
+ {/* ===========  Mi =========== */}
+ <section>
+        <Container>
+          <Row>
+            <Col lg="12" className="mb-4 text-center">
+              <h6 className="section__subtitle">NEKE OD PREPORUKA</h6>
+              <h2 className="section__title">NAŠIH KLIJENATA</h2>
+            </Col>
+
+            <Testimonial />
+          </Row>
+        </Container>
+      </section>
+
         </Helmet>
      );
 }

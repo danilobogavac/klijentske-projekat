@@ -17,10 +17,10 @@ const carData = [
     imgUrl: img01,
     model: "Model 3",
     price: 50,
-    speed: "20kmpl",
+    speed: "20km",
     gps: "GPS Navigation",
     seatType: "Heated seats",
-    automatic: "Automatic",
+    automatic: "Automatik",
     description:
       " Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.",
   },

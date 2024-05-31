@@ -1,44 +1,44 @@
 const serviceData = [
     {
       id: 1,
-      title: "City Transfer",
+      title: "Prevoz u gradu",
       icon: "ri-map-pin-2-line",
-      desc: "Tempor tempor sadipscing vero lorem sea, invidunt sed et eos ipsum et erat. Dolor ut duo sadipscing lorem. Gubergren gub",
+      desc: "Uz našu agenciju imate obezbeđen 24/7 pristup prevozu u gradu u kome odsedate. ",
     },
   
     {
       id: 2,
-      title: "Whole  City Tour",
+      title: "Obilazak grada",
       icon: "ri-community-line",
-      desc: "Tempor tempor sadipscing vero lorem sea, invidunt sed et eos ipsum et erat. Dolor ut duo sadipscing lorem. Gubergren gub",
+      desc: "Uz naše lokalne vodiče imate pristup najboljim turama u gradovima u kojima odsedate!",
     },
   
     {
       id: 3,
-      title: "Unlimited Miles Car Rental",
+      title: "Neograničena upotreba vozila",
       icon: "ri-roadster-line",
-      desc: "Tempor tempor sadipscing vero lorem sea, invidunt sed et eos ipsum et erat. Dolor ut duo sadipscing lorem. Gubergren gub",
+      desc: "Nama nije bitno gde idete i koliko daleko! Vežite pojase i uživajte.",
     },
   
     {
       id: 4,
-      title: "Fast & Easy Booking",
+      title: "Brzo & jednostavno bukiranje",
       icon: "ri-timer-flash-line",
-      desc: "Tempor tempor sadipscing vero lorem sea, invidunt sed et eos ipsum et erat. Dolor ut duo sadipscing lorem. Gubergren gub",
+      desc: "Najlakši način da bukirate vaše vozilo!",
     },
   
     {
       id: 5,
-      title: "Many Pickup Locations",
+      title: "Veliki broj pickup lokacija",
       icon: "ri-map-pin-line",
-      desc: "Tempor tempor sadipscing vero lorem sea, invidunt sed et eos ipsum et erat. Dolor ut duo sadipscing lorem. Gubergren gub",
+      desc: "Najveći broj lokacija sa kojih možete da preuzemete vaše vozilo.",
     },
   
     {
       id: 6,
-      title: "Airport Transfer",
+      title: "Prevoz sa aerodroma",
       icon: "ri-flight-takeoff-line",
-      desc: "Tempor tempor sadipscing vero lorem sea, invidunt sed et eos ipsum et erat. Dolor ut duo sadipscing lorem. Gubergren gub",
+      desc: "Uz našu agenciju imate obezbeđen prevoz sa aerodroma!",
     },
   ];
   
