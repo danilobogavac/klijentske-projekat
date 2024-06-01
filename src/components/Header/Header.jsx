@@ -56,7 +56,7 @@ const Header = () => {
                 </Link>
 
                 <Link to="#" className=" d-flex align-items-center gap-1">
-                  <i class="ri-user-line"></i> Prijava
+                  <i class="ri-user-line"></i> Registracija
                 </Link>
               </div>
             </Col>
@@ -71,7 +71,7 @@ const Header = () => {
             <Col lg="4" md="3" sm="4">
               <div className="logo">
                 <h1>
-                  <Link to="/home" className=" d-flex align-items-center gap-2">
+                  <Link to="/početna" className=" d-flex align-items-center gap-2">
                   <i class="ri-xrp-line"></i>
                     <span>
                       Rent a Car <br /> Servis

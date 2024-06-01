@@ -3,9 +3,10 @@ import Slider from "react-slick";
 
 import "../../styles/testimonial.css";
 
-import ava01 from "../../assets/all-images/ava-1.jpg";
-import ava02 from "../../assets/all-images/ava-2.jpg";
-import ava03 from "../../assets/all-images/ava-3.jpg";
+import ava01 from "../../assets/all-images/elmin.png";
+import ava02 from "../../assets/all-images/sofija.png";
+import ava03 from "../../assets/all-images/vanja.png";
+import ava04 from "../../assets/all-images/andjela.png";
 
 const Testimonial = () => {
   const settings = {
@@ -56,7 +57,7 @@ const Testimonial = () => {
 
       <div className="testimonial py-4 px-3">
         <p className="section__description">
-          U svakom trenutku kada mi je potrebam hitan prevoz do Pazove znam na koga da se oslonim. Oni su moji heroji!
+          Kad god poželim da trknem do Pazove znam na koga da se oslonim. Oni su moji heroji!
         </p>
 
         <div className="mt-3 d-flex align-items-center gap-4">
@@ -80,6 +81,20 @@ const Testimonial = () => {
           <div>
             <h6 className="mb-0 mt-3">Vanja Antin</h6>
             <p className="section__description">Subotica</p>
+          </div>
+        </div>
+      </div>
+      <div className="testimonial py-4 px-3">
+        <p className="section__description">
+          Neću više da se guram sa ljudima u autobusu! Jendom nedeljno kada dolazim na faks želim da to bude gospodski. Vaša agencija i to omogućuje zbog pristupačnih cena!
+        </p>
+
+        <div className="mt-3 d-flex align-items-center gap-4">
+          <img src={ava04} alt="" className="w-25 h-25 rounded-2" />
+
+          <div>
+            <h6 className="mb-0 mt-3">Anđela Vasić</h6>
+            <p className="section__description">Mladenovac</p>
           </div>
         </div>
       </div>
