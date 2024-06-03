@@ -11,7 +11,7 @@ import "../styles/about.css";
 
 const About = () => {
   return (
-    <Helmet title="About">
+    <Helmet title="O nama">
       <CommonSection title="O nama" />
       <AboutSection aboutClass="aboutPage" />
 

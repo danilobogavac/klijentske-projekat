@@ -1,8 +1,8 @@
 // import all images from assets/images directory
-import img01 from "../all-images/cars-img/nissan-offer.png";
+import img01 from "../all-images/cars-img/tesla.png";
 import img02 from "../all-images/cars-img/offer-toyota.png";
-import img03 from "../all-images/cars-img/bmw-offer.png";
-import img04 from "../all-images/cars-img/nissan-offer.png";
+import img03 from "../all-images/cars-img/bmw3.png";
+import img04 from "../all-images/cars-img/nisann.png";
 import img05 from "../all-images/cars-img/offer-toyota.png";
 import img06 from "../all-images/cars-img/mercedes-offer.png";
 import img07 from "../all-images/cars-img/toyota-offer-2.png";
@@ -18,12 +18,11 @@ const carData = [
     model: "Model 3",
     price: 50,
     speed: "20km",
-    gps: "GPS Navigation",
-    seatType: "Heated seats",
+    gps: "GPS Navigacija",
+    seatType: "Grejači sedista",
     automatic: "Automatik",
     description:
-      " Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.",
-  },
+    "Baba ga vozila.",  },
 
   {
     id: 2,
@@ -34,12 +33,11 @@ const carData = [
     model: "Model-2022",
     price: 50,
     speed: "45km",
-    gps: "GPS Navigation",
-    seatType: "Heated seats",
+    gps: "GPS Navigacija",
+    seatType: "Grejači sedista",
     automatic: "Automatik",
     description:
-      " Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.",
-  },
+    "Baba ga vozila.",  },
 
   {
     id: 3,
@@ -50,12 +48,11 @@ const carData = [
     model: "Model-2022",
     price: 65,
     speed: "49km",
-    gps: "GPS Navigation",
-    seatType: "Heated seats",
+    gps: "GPS Navigacija",
+    seatType: "Grejači sedista",
     automatic: "Automatik",
     description:
-      " Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.",
-  },
+    "Baba ga vozila.",  },
 
   {
     id: 4,
@@ -66,12 +63,11 @@ const carData = [
     model: "Model-2022",
     price: 70,
     speed: "22km",
-    gps: "GPS Navigation",
-    seatType: "Heated seats",
+    gps: "GPS Navigacija",
+    seatType: "Grejači sedista",
     automatic: "Automatik",
     description:
-      " Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.",
-  },
+    "Baba ga vozila.",  },
 
   {
     id: 5,
@@ -82,12 +78,11 @@ const carData = [
     model: "Model-2022",
     price: 45,
     speed: "43.5km",
-    gps: "GPS Navigation",
-    seatType: "Heated seats",
+    gps: "GPS Navigacija",
+    seatType: "Grejači sedista",
     automatic: "Automatik",
     description:
-      " Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.",
-  },
+    "Baba ga vozila.",  },
 
   {
     id: 6,
@@ -98,11 +93,11 @@ const carData = [
     model: "Model-2022",
     price: 85,
     speed: "10km",
-    gps: "GPS Navigation",
-    seatType: "Heated seats",
+    gps: "GPS Navigacija",
+    seatType: "Grejači sedista",
     automatic: "Automatik",
     description:
-      " Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.",
+    "Baba ga vozila.",
   },
 
   {
@@ -114,11 +109,11 @@ const carData = [
     model: "Model 3",
     price: 50,
     speed: "50km",
-    gps: "GPS Navigation",
-    seatType: "Heated seats",
+    gps: "GPS Navigacija",
+    seatType: "Grejači sedista",
     automatic: "Automatik",
     description:
-      " Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.",
+    "Baba ga vozila.",
   },
 
   {
@@ -130,11 +125,11 @@ const carData = [
     model: "Model 3",
     price: 50,
     speed: "120km",
-    gps: "GPS Navigation",
-    seatType: "Heated seats",
+    gps: "GPS Navigacija",
+    seatType: "Grejači sedista",
     automatic: "Automatik",
     description:
-      " Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam. Dolor labore lorem no accusam sit justo sadipscing labore invidunt voluptua, amet duo et gubergren vero gubergren dolor. At diam.",
+      "Baba ga vozila.",
   },
 ];
 
