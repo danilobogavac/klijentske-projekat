@@ -5,7 +5,7 @@ import ONama from "../pages/ONama";
 import Automobili from "../pages/Automobili";
 import Automobil from "../pages/Automobil";
 import Blog from "../pages/Blog";
-import BlogDetails from "../pages/BlogDetails";
+import Blogovi from "../pages/Blogovi";
 import NotFound from "../pages/NotFound";
 import Kontakt from "../pages/Kontakt";
 
@@ -17,8 +17,8 @@ const Routers = () => {
           <Route path="/onama" element={<ONama />} />
           <Route path="/automobili" element={<Automobili />} />
           <Route path="/automobili/:slug" element={<Automobil />} />
-          <Route path="/blogovi" element={<Blog />} />
-          <Route path="/blogovi/:slug" element={<BlogDetails />} />
+          <Route path="/blogovi" element={<Blogovi />} />
+          <Route path="/blogovi/:slug" element={<Blog />} />
           <Route path="/kontakt" element={<Kontakt />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

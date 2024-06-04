@@ -52,7 +52,7 @@ const OurMembers = () => {
                   <i class="ri-facebook-line"></i>
                 </Link>
                 <Link to={item.twitUrl}>
-                  <i class="ri-twitter-line"></i>
+                  <i class="ri-twitter-x-line"></i>
                 </Link>
 
                 <Link to={item.linkedinUrl}>

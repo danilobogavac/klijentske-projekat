@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef} from "react";
 
 import { Container, Row, Col } from "reactstrap";
 import { Link, NavLink } from "react-router-dom";
@@ -32,6 +32,7 @@ const Header = () => {
   const menuRef = useRef(null);
 
   const toggleMenu = () => menuRef.current.classList.toggle("menu__active");
+
 
   return (
     <header className="header">
