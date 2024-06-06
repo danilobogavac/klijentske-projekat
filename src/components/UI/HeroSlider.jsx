@@ -19,7 +19,7 @@ const HeroSlider = () => {
   };
   return (
     <Slider {...settings} className="hero__slider">
-      <div className="slider__item slider__item-01 mt0">
+      <div className="slider__item slider__item-01 mt0" >
         <Container>
           <div className="slider__content ">
             <h4 className="text-light mb-3">Vaš automobil za samo  $40 na dan!</h4>
@@ -32,7 +32,7 @@ const HeroSlider = () => {
         </Container>
       </div>
 
-      <div className="slider__item slider__item-02 mt0">
+      <div className="slider__item slider__item-02 mt0" >
         <Container>
           <div className="slider__content ">
             <h4 className="text-light mb-3">Vaš automobil za samo  $40 na dan!</h4>
@@ -45,7 +45,7 @@ const HeroSlider = () => {
         </Container>
       </div>
 
-      <div className="slider__item slider__item-03 mt0">
+      <div className="slider__item slider__item-03 mt0" >
         <Container>
           <div className="slider__content ">
             <h4 className="text-light mb-3">Vaš automobil za samo  $40 na dan!</h4>
@@ -57,8 +57,8 @@ const HeroSlider = () => {
           </div>
         </Container>
       </div>
-    </Slider>
+      </Slider>
   );
 };
-
+  
 export default HeroSlider;
