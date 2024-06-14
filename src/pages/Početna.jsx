@@ -65,7 +65,7 @@ const Home = () => {
         </Container>
       </section>
 
- {/* ===========  Mi =========== */}
+ {/* ===========  Klijenti =========== */}
  <section>
         <Container>
           <Row>
