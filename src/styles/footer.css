@@ -61,7 +61,20 @@
     border: none;
     outline: none;
   }
-  
+.error-message {
+  color: white;
+}
+.newsletter button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 0 12px;
+}
+.newsletter button:hover {
+  color: #f9a826;
+}
   .newsletter span i {
     color: #fff;
   }
@@ -90,6 +103,20 @@
       font-size: 0.7rem;
     }
   
-    
+
   }
+  .newsletter-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2ecc71; /* Zelena boja, možete promeniti prema vašim potrebama */
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    z-index: 1000; /* Veći z-index kako bi bio iznad ostalog sadržaja */
+    animation: slideDown 1s ease forwards;
+  }
+  
+  
   
