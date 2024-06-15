@@ -4,13 +4,17 @@ import { Container, Row, Col } from "reactstrap";
 import Helmet from "../components/Helmet/Helmet";
 import { useParams } from "react-router-dom";
 import BookingForm from "../components/UI/BookingForm";
-import PaymentMethod from "../components/UI/PaymentMethod"; // Promenjeno ime komponente
+import PaymentMethod from "../components/UI/PaymentMethod";
 import "../../src/styles/car-item.css";
 
 const CarDetails = () => {
   const { slug } = useParams();
   const [isBookingCompleted, setIsBookingCompleted] = useState(false);
-  const [isPaymentCompleted, setIsPaymentCompleted] = useState(false); // Dodao stanje za ispunjenost plaćanja
+  const [isPaymentCompleted, setIsPaymentCompleted] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
+
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filteredCars, setFilteredCars] = useState(carData);
 
   const singleCarItem = carData.find((item) => item.carName === slug);
 
@@ -26,8 +30,26 @@ const CarDetails = () => {
     setIsPaymentCompleted(true);
   };
 
-  // Uslov za prikaz dugmeta "Rezerviši"
+  const handleReserveClick = () => {
+    setShowPopup(true);
+    setTimeout(() => {
+      setShowPopup(false);
+    }, 3000);
+  };
+
   const isReserveButtonVisible = isBookingCompleted && isPaymentCompleted;
+
+  const handleSearch = (query) => {
+    setSearchQuery(query);
+    if (query) {
+      const filtered = carData.filter((car) =>
+        car.carName.toLowerCase().includes(query.toLowerCase())
+      );
+      setFilteredCars(filtered);
+    } else {
+      setFilteredCars(carData);
+    }
+  };
 
   return (
     <Helmet title={singleCarItem.carName}>
@@ -99,7 +121,7 @@ const CarDetails = () => {
               </div>
             </Col>
 
-            {isBookingCompleted && isPaymentCompleted ? ( // Prikazivanje poruke o rezervaciji samo kada su oba uslova ispunjena
+            {isBookingCompleted && isPaymentCompleted ? (
               <Col lg="12" className="mt-5">
                 <div className="booking-completed mt-5">
                   <h5 className="mb-4 fw-bold">Rezervacija je uspešno izvršena!</h5>
@@ -117,21 +139,27 @@ const CarDetails = () => {
                 <Col lg="5" className="mt-5">
                   <div className="payment__info mt-5">
                     <h5 className="mb-4 fw-bold">Naplata</h5>
-                    <PaymentMethod onPaymentComplete={handlePaymentCompletion} /> {/* Dodaj prop za onPaymentComplete */}
+                    <PaymentMethod onPaymentComplete={handlePaymentCompletion} />
                   </div>
                 </Col>
               </>
             )}
 
-            {/* Prikaz dugmeta "Rezerviši" samo kada su oba uslova ispunjena  */}
             {isReserveButtonVisible && (
               <Col lg="12" className="mt-3">
                 <div className="reserve-button">
-                  <button className="btn btn-primary">Rezerviši</button>
+                  <button className="btn btn-primary" onClick={handleReserveClick}>
+                    Rezerviši
+                  </button>
                 </div>
               </Col>
             )}
           </Row>
+          {showPopup && (
+            <div className="popup">
+              <p>Rezervacija je uspešno izvršena!</p>
+            </div>
+          )}
         </Container>
       </section>
     </Helmet>
