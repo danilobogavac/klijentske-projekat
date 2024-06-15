@@ -123,7 +123,7 @@ const CarDetails = () => {
               </>
             )}
 
-            {/* Prikaz dugmeta "Rezerviši" samo kada su oba uslova ispunjena */}
+            {/* Prikaz dugmeta "Rezerviši" samo kada su oba uslova ispunjena  */}
             {isReserveButtonVisible && (
               <Col lg="12" className="mt-3">
                 <div className="reserve-button">
