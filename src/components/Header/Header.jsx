@@ -113,7 +113,7 @@ const Header = () => {
               className=" d-flex align-items-center justify-content-end "
             >
               <button className="header__btn btn ">
-                <Link to="/contact">
+                <Link to="/kontakt">
                   <i class="ri-phone-line"></i> Pozovite nas!
                 </Link>
               </button>
