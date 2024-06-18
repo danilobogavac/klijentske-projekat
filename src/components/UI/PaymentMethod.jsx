@@ -5,9 +5,8 @@ import "../../styles/payment.css";
 
 const PaymentMethod = ({ onPaymentComplete }) => {
   const handlePaymentSubmit = () => {
-    // Pretend to process payment
     console.log("Payment processed successfully");
-    onPaymentComplete(); // Obavesti roditeljsku komponentu da je plaćanje uspešno izvršeno
+    onPaymentComplete();
   };
 
   return (
@@ -28,19 +27,19 @@ const PaymentMethod = ({ onPaymentComplete }) => {
         <label htmlFor="" className="d-flex align-items-center gap-2">
           <input type="radio" name="paymentMethod" /> Master kartica
         </label>
-
         <img src={masterCard} alt="" />
-      
       </div>
 
       <div className="payment mt-3 d-flex align-items-center justify-content-between">
         <label htmlFor="" className="d-flex align-items-center gap-2">
           <input type="radio" name="paymentMethod" /> Paypal
         </label>
-
         <img src={paypal} alt="" />
-        
       </div>
+
+      <button type="button" className="btn btn-primary mt-3" onClick={handlePaymentSubmit}>
+        Potvrdi Plaćanje
+      </button>
     </>
   );
 };

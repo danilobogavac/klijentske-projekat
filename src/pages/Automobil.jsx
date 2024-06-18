@@ -11,10 +11,7 @@ const CarDetails = () => {
   const { slug } = useParams();
   const [isBookingCompleted, setIsBookingCompleted] = useState(false);
   const [isPaymentCompleted, setIsPaymentCompleted] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
-
-  const [searchQuery, setSearchQuery] = useState("");
-  const [filteredCars, setFilteredCars] = useState(carData);
+  const [isReserved, setIsReserved] = useState(false); // Novo stanje
 
   const singleCarItem = carData.find((item) => item.carName === slug);
 
@@ -31,25 +28,10 @@ const CarDetails = () => {
   };
 
   const handleReserveClick = () => {
-    setShowPopup(true);
-    setTimeout(() => {
-      setShowPopup(false);
-    }, 3000);
+    setIsReserved(true); // Postavi da je rezervacija završena
   };
 
-  const isReserveButtonVisible = isBookingCompleted && isPaymentCompleted;
-
-  const handleSearch = (query) => {
-    setSearchQuery(query);
-    if (query) {
-      const filtered = carData.filter((car) =>
-        car.carName.toLowerCase().includes(query.toLowerCase())
-      );
-      setFilteredCars(filtered);
-    } else {
-      setFilteredCars(carData);
-    }
-  };
+  const isReserveButtonVisible = isBookingCompleted && isPaymentCompleted && !isReserved;
 
   return (
     <Helmet title={singleCarItem.carName}>
@@ -121,13 +103,15 @@ const CarDetails = () => {
               </div>
             </Col>
 
-            {isBookingCompleted && isPaymentCompleted ? (
+            {isBookingCompleted && isPaymentCompleted && isReserved && (
               <Col lg="12" className="mt-5">
                 <div className="booking-completed mt-5">
                   <h5 className="mb-4 fw-bold">Rezervacija je uspešno izvršena!</h5>
                 </div>
               </Col>
-            ) : (
+            )}
+
+            {!isReserved && (
               <>
                 <Col lg="7" className="mt-5">
                   <div className="booking-info mt-5">
@@ -146,20 +130,15 @@ const CarDetails = () => {
             )}
 
             {isReserveButtonVisible && (
-              <Col lg="12" className="mt-3">
+              <Col lg="12"  className="mt-3">
                 <div className="reserve-button">
                   <button className="btn btn-primary" onClick={handleReserveClick}>
-                    Rezerviši
+                   Kliknite na ovo dugme ukoliko definitivno potvrđujete Vašu rezervaciju!
                   </button>
                 </div>
               </Col>
             )}
           </Row>
-          {showPopup && (
-            <div className="popup">
-              <p>Rezervacija je uspešno izvršena!</p>
-            </div>
-          )}
         </Container>
       </section>
     </Helmet>
