@@ -13,6 +13,7 @@ git config --local user.email "Tvoj email sa Git-a"
 9) git push origin src
 
 Ove korake pratiti za dodavanje na zajednički git repozitorijum!
+
 Opis funkcionalnosti projekta
 
 Naša tema seminarskog rada je veb aplikacija za iznajmljivanje vozila. Konkretno u našoj aplikaciji imamo 5 aktivnih stracina koje predstavljaju početnu stranicu, stranicu o nama, stranicu sa ponudama automobila i naš kontakt. 
@@ -27,5 +28,5 @@ Zatim, na samom kraju imamo sekciju u kojoj se nalaze naši članovi tima, sa di
 
 Stranica „Automobili“ sadrži elemente svim postojećih automobila koje mi imamo u okviru podataka upotrebljenih za naš sajt. Na početku same stranice koja pokazuje našu kompletnu ponudu, imamo implementiran filter koji može da sortira automobile po ceni iznajmljivanja rastuće ili opadajuće.
 Stranica „Blog“ sadrži sve blogove koje imamo na sajtu. Konkretno mi imamo napisana samo tri bloga, pa smo pozvali dva puta Stranicu koja prikazuje sve blogove da bismo dobili malo na sadržajnosti same stranice. Svaki blog može da se otvori i pročita, a pri prikazu pojedinačnog bloga, sa strane imamo i manji prikaz ostalih blogova na stranici, tako da korisnik može da pročita i sve naše ostale blogove.
-Naša poslednja stranica je „Kontakt“. U okvori ove stranice, korisnik može da nađe sve neophodne informacije o nama na jendom mestu. Na desnoj strani se nalaze Informacije za kontakt i linkovi ka našim društvenim mrežama, a na levoj stranice se nalazi forma za slanje poruka našoj agenciji. Korisnik unosi neophodne podatke i može nas obavestiti o nekom pitanju na veoma jednsotavan način.
+Naša poslednja stranica je „Kontakt“. U okvori ove stranice, korisnik može da nađe sve neophodne informacije o nama na jendom mestu. Na desnoj strani se nalaze Informacije za kontakt i linkovi ka našim društvenim mrežama, a na levoj stranice se nalazi forma za slanje poruka našoj agenciji. Korisnik unosi neophodne podatke i može nas obavestiti o nekom pitanju na veoma jednostavan način.
 
