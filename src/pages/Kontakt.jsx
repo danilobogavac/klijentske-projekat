@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
 import { Container, Row, Col, Form, FormGroup, Input } from "reactstrap";
 import Helmet from "../components/Helmet/Helmet";
@@ -32,13 +33,58 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [weather, setWeather] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchWeather = async () => {
+      const apiKey = "26c6bb9b2199470ba21fa7a7761fe714";
+      const city = "Belgrade";
+      const url = `https://api.weatherbit.io/v2.0/current?city=${city}&key=${apiKey}&lang=sr`;
+
+      try {
+        const response = await axios.get(url);
+        console.log(response.data); // Provera strukture podataka
+        setWeather(response.data.data[0]);
+      } catch (error) {
+        setError("Greška pri preuzimanju vremenskih podataka");
+      }
+    };
+
+    fetchWeather();
+
+    const loadGoogleMapsScript = () => {
+      const script = document.createElement("script");
+      script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyB8tkIJw6NULj3KYNAofe44qJVfvpqOkFE&callback=initMap`;
+      script.async = true;
+      script.defer = true;
+      window.initMap = initMap;
+      document.body.appendChild(script);
+    };
+
+    const initMap = () => {
+      const agencyLocation = { lat: 44.796953, lng: 20.476501 }; // Koordinate za Beograd
+      const map = new window.google.maps.Map(document.getElementById("map"), {
+        zoom: 15,
+        center: agencyLocation,
+      });
+      new window.google.maps.Marker({
+        position: agencyLocation,
+        map: map,
+      });
+    };
+
+    if (!window.google) {
+      loadGoogleMapsScript();
+    } else {
+      initMap();
+    }
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Simulacija slanja podataka (možete dodati logiku za slanje podataka putem API-ja)
     setTimeout(() => {
       setIsFormSubmitted(true);
-      // Resetovanje polja za unos nakon 3 sekunde
       setTimeout(() => {
         setFormData({
           name: "",
@@ -46,8 +92,8 @@ const Contact = () => {
           message: "",
         });
         setIsFormSubmitted(false);
-      }, 1000); // 3000ms = 3 sekunde
-    }, 0); // 1000ms = 1 sekunda
+      }, 1000);
+    }, 0);
   };
 
   const handleChange = (e) => {
@@ -139,6 +185,22 @@ const Contact = () => {
                     </Link>
                   ))}
                 </div>
+
+                <h6 className="fw-bold mt-4">Vremenska prognoza</h6>
+                {error ? (
+                  <p>{error}</p>
+                ) : weather ? (
+                  <div>
+                    <p>{weather.city_name}</p>
+                    <p>{weather.temp}°C</p>
+                  </div>
+                ) : (
+                  <p>Učitavanje vremenskih podataka...</p>
+                )}
+
+                {/* Dodajte div za Google mapu */}
+                <h6 className="fw-bold mt-4">Lokacija na Google mapi</h6>
+                <div id="map" style={{ height: "400px", width: "100%" }}></div>
               </div>
             </Col>
           </Row>
